@@ -1,0 +1,119 @@
+*{margin:0;padding:0;}
+a{text-decoration: none;}
+li{list-style: none;}
+em{font-style:normal;}
+
+body{background: #ebeaea;}
+.bigbox{width:80%;height:auto;margin:0 auto;background: #fff;padding-bottom: 30px;}
+header{width:100%;height:140px;/*background: #0086B3;*/overflow: hidden;border-bottom: 2px solid #ccc;}
+header .logo{margin:40px 0 0 20px;float:left;}
+header p{float:left;margin:40px 0 0 20px;font-size: 36px;color:#8e8d8d;}
+header #cart_step{float:right;margin:40px 20px 0 0;}
+header #cart_step img{float:left;}
+
+#opacityBox{width:100%;height: 100%;background: #000;opacity: 0.3;display: none;position:fixed;top:0;left:0;z-index: 1000;}
+
+#add{width: 500px; display: none;height:515px;background: #fff;border:1px solid #ccc;position: absolute;top:0;left:0;right:0;bottom: 0;margin:auto;z-index: 1001;}
+#add #add-header{border-bottom:1px solid #ccc;list-style: none;width: 500px; height:36px;text-align: center;line-height: 36px;font-weight: 700;}
+#add #add_body_city li{width: 100%;list-style: none;font-size:14px;padding: 0;line-height: 36px;}
+#add #add_body_city li strong{color: #F56600;width:50px;display: block;float: left;margin-left:10px;}
+#add #add_body_city li p{float:left;width:419px;}
+#add #add_body_city li p a{color:#939494;width:40px;margin: 5px 0 0 5px;}
+#add #add_body_city li p a:hover{color: #f56600;text-decoration: underline;}
+
+.explain{width:90%;height:26px;margin:20px auto;border: 1px solid #6dba43;background:#eafae1;line-height: 26px;font-size:14px;text-indent:45px;position:relative;}
+.explain img{position:absolute;top:5px;left:15px;}
+
+#cart-list{width:90%;height:auto;border-top:2px solid #ccc;margin:0 auto;overflow: hidden;}
+#cart-list #delivery_add{width:99.8%;height: 44px;background: #f9f9f9;border-left:1px solid #ccc;border-right:1px solid #ccc;}
+#cart-list #delivery_add span:first-child{float:left;margin:14px 10px 0 20px;}
+#cart-list #delivery_add input{float:left;margin-top:13px;width:100px;height: 18px;}
+#cart-list #delivery_add span:nth-child(3){float:left;margin:15px 0 0 20px;font-size: 12px;}
+#cart-list .buy-box{width:99.8%;height:60px;border:1px solid #ccc;}
+#cart-list .buy-box div{border-right:1px solid #ccc;font-size:14px;float:left;height:60px;line-height: 60px;text-align: center;}
+#cart-list .buy-box div:nth-child(1){width:5%;}
+#cart-list .buy-box div:nth-child(2){width:24.1%;}
+#cart-list .buy-box div:nth-child(3){width:15%;}
+#cart-list .buy-box div:nth-child(4){width:10%;}
+#cart-list .buy-box div:nth-child(5){width:10%;}
+#cart-list .buy-box div:nth-child(6){width:15%;}
+#cart-list .buy-box div:nth-child(7){width:15%;}
+#cart-list .buy-box div:nth-child(8){width:5%;border:0;}
+#cart-list .buy-box div:nth-child(2) img{width:50px;height: 50px;float:left;margin-left:5px;border:1px solid #ccc;margin-top:4px;}
+#cart-list .buy-box div:nth-child(2) span{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+#cart-list .buy-box div:nth-child(6){position: relative;}
+#cart-list .buy-box div:nth-child(6) input:nth-child(2){width:50%;height:30px;}
+#cart-list .buy-box div:nth-child(6) input[type="button"]{width:20px;height: 16px;position:absolute;left:84px;border:1px solid #ccc;line-height: 16px;text-align: center;}
+#cart-list .buy-box div:nth-child(6) .minus{top:30px;}
+#cart-list .buy-box div:nth-child(6) .add{top:15px;}
+#cart-list .buy-box div:nth-child(8) a{color:#000;}
+#cart-list .buy-box div:nth-child(8) a:hover{color:#F56600;text-decoration: underline;}
+#cart-list #kong_gwc{width:99.8%;height: 300px;background: #fff;text-align: center;display: none;}
+#cart-list #list_foot{width:99.8%;position:relative;height:60px;background: #f9f9f9;border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc;}
+#cart-list #list_foot #total{float:right;margin:10px 10px 0 0;font-size: 20px;}
+#cart-list #list_foot #total em{font-size:24px;margin:0 5px;color:#F56600;}
+#cart-list #dele_cart{width:100px;height:30px;cursor:pointer;font-size: 14px;color:#01b0f1;float:left;margin:10px 0 0 30px;line-height:30px;}
+#cart-list #dele_cart img{display:block;float:left;margin:6px 8px 0 0;}
+#cart-list p:nth-last-child(2){float:left;margin:16px 30px 0 20px;font-size: 14px;}
+#cart-list p:nth-last-child(2) a{width:70px;height: 20px;border:1px solid #01B0F1;text-align: center;color:#01b0f1;margin-left:10px;}
+#cart-list p:nth-last-child(2) a:hover{color: #fff;background: #01B0F1;}
+#cart-list #order{display:block;width:200px;height:50px;background: #F56600;float:right;color:#fff;line-height: 40px;text-align: center;}
+
+
+#choose{width:90%;height:auto;margin:50px auto 50px;}
+#choose h1{font-size:24px;color:#F56600;}
+#choose h1 i{font-size:26px;margin-right:20px;}
+#choose ul{width:100%;height:300px;margin-top:10px;}
+#choose ul li{width:24.2%;margin-right:5px;height:300px;border:1px solid #ccc;float:left;}
+#choose ul li:hover{border:1px solid #F56600;}
+#choose ul li a img{width:180px;height: auto;margin:20px auto 10px;display: block;}
+#choose ul li a p{font-size:14px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width:90%;margin:0 auto;}
+#choose ul li a{color:#555;}
+#choose ul li:hover a{color:#F56600;}
+#choose ul li span{font:normal normal 18px/24px "宋体";display: block;margin:5px auto;width:45%;height:24px;}
+#choose ul li strong{font:normal normal 20px/24px "宋体";}
+#choose ul li div a{font:normal normal 16px/24px "宋体";color:#F56600;background: #fff;display:block;margin: 0 auto;width:50%;height:24px;border:1px solid #F56600;border-radius: 10px;text-indent: 10px;;}
+#choose ul li div a:hover{font:normal normal 16px/24px "宋体";color:#fff;background: #F56600;}
+
+/*--------------------尾部-------------------------*/
+
+div.footer{
+	margin-top: 80px;
+	height: 80px;
+}
+
+div.footer>ul{
+	width: 223px;
+	height: 16px;
+	margin: 10px auto;
+}
+
+div.footer>ul>li>a{
+	display: inline-block;
+	height: 14px;
+	color: gray;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-left: 1px solid gray;
+	line-height: 14px;
+}
+
+div.footer>ul>li>a:hover{
+	color: #333;
+}
+
+div.footer>ul>li{
+	float: left;
+	font-family:"微软雅黑" ;
+	font-size: 12px;
+
+}
+
+div.footer>ul>li:first-child>a{
+	border: none;
+}
+
+div.footer>p{font-family: "微软雅黑";font-size: 12px;color: gray;text-align: center;border-bottom: 20px;
+}
+
+div.footer>p>a{color: gray;}

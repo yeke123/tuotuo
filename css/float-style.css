@@ -1,0 +1,10 @@
+*{margin:0;padding:0;}
+li{list-style: none;}
+a{text-decoration: none;}
+b{font-weight: 100;}
+em{font-style: normal;}
+
+.float-box{position:fixed;right:10px;bottom:20px;z-index: 998;}
+.float-box p a{margin-bottom:30px;display:flex;flex-direction:column;justify-content:center;align-items:center;width:70px;height:70px;background: #f2f2f2;border-radius: 5px;color:#555;font-size: 14px;}
+.float-box p a i{font-size: 26px;}
+.float-box p a:hover{color: #f56600;}	

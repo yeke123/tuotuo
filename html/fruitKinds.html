@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>沱沱工社 - 蔬菜水果</title>
+		<link rel="stylesheet" type="text/css" href="../css/Kinds-style.css"/>
+		<link rel="stylesheet" type="text/css" href="../font/iconfont.css"/>	
+		<link rel="stylesheet" href="../css/header-style.css" />
+		<link rel="stylesheet" href="../css/footer-style.css" />
+		<link rel="stylesheet" href="../css/float-style.css" />
+		<script type="text/javascript" src="../font/iconfont.js"></script>
+	</head>
+	<body>
+		<div id="opacityBox"></div>
+		<div id="add">
+			<div id="add-header">请选择您的收货城市！</div>
+				<ul id="add_body_city">
+					<li>
+						<strong>热门：</strong>
+							<p>
+								<a>北京</a>
+								<a>上海</a>
+								<a>天津</a>
+							</p>
+					</li>
+					<li>
+						<strong>山东：</strong>
+							<p>
+								<a>济南</a>
+								<a>青岛</a>
+								<a>烟台</a>
+								<a>潍坊</a>
+								<a>临沂</a>
+								<a>淄博</a>
+								<a>济宁</a>
+								<a>泰安</a>
+								<a>聊城</a>
+								<a>威海</a>
+								<a>枣庄</a>
+								<a>德州</a>
+								<a>日照</a>
+								<a>东营</a>
+								<a>菏泽</a>
+								<a>滨州</a>
+								<a>莱芜</a>
+							</p>
+					</li>
+					<li>
+						<strong>江苏：</strong>
+						<p>
+							<a>南京</a>
+							<a>苏州</a>
+							<a>无锡</a>
+							<a>常州</a>
+							<a>徐州</a>
+							<a>南通</a>
+							<a>扬州</a>
+							<a>盐城</a>
+							<a>淮安</a>
+							<a>连云港</a>
+							<a>泰州</a>
+							<a>宿迁</a>
+							<a>镇江</a>
+						</p>
+					</li>
+					<li>
+						<strong>浙江：</strong>
+						<p>
+							<a>杭州</a>
+							<a>宁波</a>
+							<a>温州</a>
+							<a>金华</a>
+							<a>嘉兴</a>
+							<a>台州</a>
+							<a>绍兴</a>
+							<a>湖州</a>
+							<a>丽水</a>
+							<a>衢州</a>
+							<a>舟山</a>
+						</p>
+					</li>
+					<li>
+						<strong>河南：</strong>
+						<p>
+							<a>郑州</a>
+							<a>洛阳</a>
+							<a>新乡</a>
+							<a>南阳</a>
+							<a>许昌</a>
+							<a>平顶山</a>
+							<a>安阳</a>
+							<a>焦作</a>
+							<a>商丘</a>
+							<a>开封</a>
+							<a>濮阳</a>
+							<a>周口</a>
+							<a>信阳</a>
+							<a>驻马店</a>
+							<a>漯河</a>
+							<a>三门峡</a>
+							<a>鹤壁</a>
+							<a>济源</a>
+						</p>
+					</li>
+					<li>
+						<strong>辽宁：</strong>
+						<p>
+							<a>沈阳</a>
+							<a>大连</a>
+							<a>鞍山</a>
+							<a>锦州</a>
+							<a>抚顺</a>
+							<a>营口</a>
+							<a>盘锦</a>
+							<a>朝阳</a>
+							<a>丹东</a>
+							<a>辽阳</a>
+							<a>本溪</a>
+							<a>葫芦岛</a>
+							<a>铁岭</a>
+							<a>阜新</a>
+						</p>
+					</li>
+					<li>
+						<strong>河北：</strong>
+						<p>
+							<a>石家庄</a>
+							<a>保定</a>
+							<a>唐山</a>
+							<a>廊坊</a>
+							<a>邯郸</a>
+							<a>秦皇岛</a>
+							<a>沧州</a>
+							<a>邢台</a>
+							<a>衡水</a>
+							<a>张家口</a>
+							<a>承德</a>
+						</p>
+					</li>
+					<li><strong>山西：</strong>
+						<p>
+							<a>太原</a>
+							<a>临汾</a>
+							<a>大同</a>
+							<a>运城</a>
+							<a>晋中</a>
+							<a>长治</a>
+							<a>晋城</a>
+							<a>阳泉</a>
+							<a>吕梁</a>
+							<a>忻州</a>
+							<a>朔州</a>
+						</p>
+					</li>
+				</ul>
+			</div>
+		<div id="head"></div>
+		<header>
+			<div class="headerbox">
+				<div class="headerbox-left">
+					<ul>
+						<li>欢迎光临沱沱工社！</li>
+						<li><a href="login.html"><i class="iconfont icon-denglu"></i>登录</a></li>
+						<li><a href="enroll.html"><i class="iconfont icon-zhuce"></i>注册</a></li>
+						<li>
+							<span>送货至：</span><input id="showAdd" type="text" value="请选择">
+							
+						</li>
+					</ul>
+				</div>
+				<div class="headerbox-right">
+					<ul>
+						<li><a href=""><i class="iconfont icon-shouji"></i>手机沱沱</a></li>
+						<li><a href=""><i class="iconfont icon-order"></i>我的沱沱</a></li>
+						<li><a href="cart.html"><i class="iconfont icon-lipinqia"></i>充值</a></li>
+						<li><a href="">提货</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div class="search">
+			<div class="searchbox">
+				<a href="../index.html" class="logo"><img src="../img/logo.png"></a>
+				<div class="sea-box">
+					<form>
+						<input id="searchBox"  type="text" value="" placeholder=" 有机蔬菜"/>
+						<div id="suggest"></div>
+						<a href="">搜 索</a>
+					</form>
+					<ul>
+						<li>热门搜索:</li>
+						<li><a href="">奇异果</a></li>
+						<li><a href="">有机蔬菜</a></li>
+						<li><a href="">黄金蟹</a></li>
+						<li><a href="">燕窝</a></li>
+						<li><a href="">土鸡蛋</a></li>
+						
+					</ul>
+				</div>
+				<div class="searchbox-right">
+					<img src="../img/search-bianzhun.jpg">
+				</div>
+			</div>
+		</div>
+		<div class="nav">
+			<ul>
+				<li>全部商品分类</li>
+				<li><a href="../index.html">首页</a></li>
+				<li><a href=""><i><img src="../img/baoyou.png"></i>沱沱团</a></li>
+				<li><a href="">沱沱礼品</a></li>
+				<li><a href=""><i><img src="../img/hotsale.gif"></i>宅配卡</a></li>
+				<li><a href="">沱沱农场</a></li>
+				<li><a href="">入驻沱沱</a></li>
+			</ul>
+		</div>
+		<section>
+			<div class="sec-topic">
+				<p><a href="../index.html">首页</a>&gt<a href="fruitKinds.html">蔬菜水果</a></p>
+			</div>
+			<div class="sec-main">
+				<div class="sec-left">
+					<ul>
+						<li>蔬菜水果</li>
+						<li><a href="vegetableKinds.html"><i class="iconfont icon-shucai"></i>蔬菜类</a></li>
+						<li><a href="shuiguoKinds.html"><i class="iconfont icon-shuiguo"></i>水果类</a></li>
+					</ul>	
+					<ul class="hotsale">
+						<li><i class="iconfont icon-rexiao"></i>热销排行</li>
+						<!--<li>
+							<a href="productVegetable.html">
+								<img src="../img/section1-pic1.jpg"/>
+								<em><i class="iconfont icon-konggouwuche"></i>加入购物车</em>
+								<p>有机韭菜（约350g/份)</p>
+							</a>
+							<span>¥12.50/份</span>
+						</li>
+						<li>
+							<a href="">
+								<img src="../img/section1-pic2.jpg"/>
+								<em><i class="iconfont icon-konggouwuche"></i>加入购物车</em>
+								<p>东方蜜小甜瓜（约400-600g/个）</p>
+							</a>
+							<span>¥10.80/份</span>
+						</li>
+						<li>
+							<a href="">
+								<img src="../img/section1-pic3.jpg"/>
+								<em><i class="iconfont icon-konggouwuche"></i>加入购物车</em>
+								<p>【豆黄金】天然腐竹 （约157g/袋）</p>
+							</a>
+							<span>¥62.00/袋</span>
+						</li>
+						<li>
+							<a href="">
+								<img src="../img/section1-pic4.jpg"/>
+								<em><i class="iconfont icon-konggouwuche"></i>加入购物车</em>
+								<p>温县铁棍山药3斤装（垆土礼盒）</p>
+							</a>
+							<span>¥12.5/盒</span>
+						</li>
+						<li>
+							<a href="">
+								<img src="../img/section1-pic5.jpg"/>
+								<em><i class="iconfont icon-konggouwuche"></i>加入购物车</em>
+								<p>不知火柑（丑柑）（约1kg/份）</p>
+							</a>
+							<span>¥28.80/份</span>
+						</li>-->
+					</ul>	
+				</div>
+				<div class="sec-right">
+						<div class="sec-r-navtop sec-r-nav">
+							<p>特性：</p>
+							<ul>
+								<li><a href="">国产</a></li>
+								<li><a href="">进口</a></li>
+								<li><a href="">有机</a></li>
+								<li><a href="">生态</a></li>
+							</ul>
+						</div>
+						<div class="sec-r-navbottom sec-r-nav">
+							<p>种类：</p>
+							<ul>
+								<li><a href="">应季蔬菜</a></li>
+								<li><a href="">当季水果</a></li>
+								<li><a href="">绿叶蔬菜</a></li>
+								<li><a href="">车厘子</a></li>
+								<li><a href="">南瓜</a></li>
+								<li><a href="">红富士苹果</a></li>
+								<li><a href="">木瓜</a></li>
+								<li><a href="">广西芒果</a></li>
+								<li><a href="">百香果</a></li>
+								<li><a href="">牛油果</a></li>
+								<li><a href="">菌类</a></li>
+								<li><a href="">海南香蕉</a></li>
+								<li><a href="">香梨</a></li>
+							</ul>
+						</div>
+						<ul class="sec-right-show">
+							<div id="sortCard">
+								<!--排序-->
+								<div id="sequencing">
+									<p>排序：</p>
+									<div class="sequenc_card">销量<img src="../img/i_arrow_01.png"></div>
+									<div class="sequenc_card">促销<img src="../img/i_arrow_01.png"></div>
+									<div class="sequenc_card">价格<img src="../img/i_arrow_01.png"></div>
+									<div class="sequenc_card">新上架<img src="../img/i_arrow_01.png"></div>
+									<div class="sequenc_card">人气<img src="../img/i_arrow_01.png"></div>
+								</div>
+								<!--筛选-->
+								<div id="filtrate">
+									<p>筛选：</p>
+									<a><input id="c-1" type="checkbox" name="会员折扣"/><label for="c-1">会员折扣</label></a>
+									<a><input id="c-2" type="checkbox" name="仅显示可送达"/><label for="c-2">仅显示可送达</label></a>
+								</div>
+							</div>
+							<!--<li>
+								<a href="">
+									<img class="youji" src="../img/youji.png">
+									<img class="pro_img" src="../img/section1-pic10.jpg"/>
+									<p>生态平菇（约250g/盒）</p>
+									
+								</a>
+								<span>¥8.80/份</span>
+								<input type="number" value= "1">
+								<a href=""><em>已有<strong>375</strong>条评论</em></a>
+								<a href=""><div class="add_cart"><i class="iconfont icon-konggouwuche"></i>加入购物车</div></a>
+							</li>
+							<li>
+								<a href="">
+									<img class="youji" src="../img/youji.png">
+									<img class="pro_img" src="../img/section1-pic11.jpg"/>
+									<p>顺意生有机西兰花 （约350g/份）</p>
+								</a>
+								<span>¥9.90/份</span>
+								<input type="number" value="1">
+								<a href=""><em>已有<strong>300</strong>条评论</em></a>
+								<a href=""><div class="add_cart"><i class="iconfont icon-konggouwuche"></i>加入购物车</div></a>
+							</li>
+							<li>
+								<a href="">
+									<img class="youji" src="../img/youji.png">
+									<img class="pro_img" src="../img/section1-pic12.jpg"/>
+									<p>顺意生有机千禧 （约350g/份）</p>
+								</a>
+								<span>¥15.80/份</span>
+								<input type="number" value= "1" />
+								<a href=""><em>已有<strong>314</strong>条评论</em></a>
+								<a href=""><div class="add_cart"><i class="iconfont icon-konggouwuche"></i>加入购物车</div></a>
+							</li>
+							<li>
+								<a href="">
+									<img class="pro_img" src="../img/section1-pic13.jpg"/>
+									<p>生态冰草 （约200g/盒）</p>
+								</a>
+								<span>¥9.90/盒</span>
+								<input type="number" value= "1" />
+								<a href=""><em>已有<strong>1300</strong>条评论</em></a>
+								<a href=""><div class="add_cart"><i class="iconfont icon-konggouwuche"></i>加入购物车</div></a>
+							</li>
+							<li>
+								<a href="">
+									<img class="pro_img" src="../img/section1-pic14.jpg"/>
+									<p>生态圆茄子 （约350--450g/份）</p>
+								</a>
+								<span>¥6.60/份</span>
+								<input type="number" value= "1" />
+								<a href=""><em>已有<strong>1400</strong>条评论</em></a>
+								<a href=""><div class="add_cart"><i class="iconfont icon-konggouwuche"></i>加入购物车</div></a>
+							</li>
+							<li>
+								<a href="">
+									<img class="pro_img" src="../img/section1-pic15.jpg"/>
+									<p>生态芦笋 （约250g/份）</p>
+								</a>
+								<span>¥22.60/盒</span>
+								<input type="number" value= "1" />
+								<a href=""><em>已有<strong>320</strong>条评论</em></a>
+								<a href=""><div class="add_cart"><i class="iconfont icon-konggouwuche"></i>加入购物车</div></a>
+							</li>
+							<li>
+								<a href="">
+									<img class="youji" src="../img/youji.png">
+									<img class="pro_img" src="../img/section1-pic16.jpg"/>
+									<p>顺意生有机菠菜 （约200g/份）</p>
+								</a>
+								<span>¥9.90/份</span>
+								<input type="number" value= "1" />
+								<a href=""><em>已有<strong>580</strong>条评论</em></a>
+								<a href=""><div class="add_cart"><i class="iconfont icon-konggouwuche"></i>加入购物车</div></a>
+							</li>
+							<li>
+								<a href="">
+									<img class="pro_img" src="../img/section1-pic17.jpg"/>
+									<p>生态蛇豆 （约300g/份）</p>
+								</a>
+								<span>¥7.80/份</span>
+								<input type="number" value= "1" />
+								<a href=""><em>已有<strong>1300</strong>条评论</em></a>
+								<a href=""><div class="add_cart"><i class="iconfont icon-konggouwuche"></i>加入购物车</div></a>
+							</li>
+							<li>
+								<a href="">
+									<img class="youji" src="../img/youji.png">
+									<img class="pro_img" src="../img/section1-pic18.jpg"/>
+									<p>有机水果玉米 （约260g/盒）</p>
+								</a>
+								<span>¥14.80/盒</span>
+								<input type="number" value= "1" />
+								<a href=""><em>已有<strong>470</strong>条评论</em></a>
+								<a href=""><div class="add_cart"><i class="iconfont icon-konggouwuche"></i>加入购物车</div></a>
+							</li>
+							<li>
+								<a href="">
+									<img class="pro_img" src="../img/section1-pic19.jpg"/>
+									<p>生态水果苤蓝 （约450-500g/份）</p>
+								</a>
+								<span>¥9.90/份</span>
+								<input type="number" value= "1" />
+								<a href=""><em>已有<strong>951</strong>条评论</em></a>
+								<a href=""><div class="add_cart"><i class="iconfont icon-konggouwuche"></i>加入购物车</div></a>
+							</li>
+							<li>
+								<a href="">
+									<img class="pro_img" src="../img/section1-pic20.jpg"/>
+									<p>鲜百香果 4个/盒 （约260g）</p>
+								</a>
+								<span>¥14.60/盒</span>
+								<input type="number" value= "1" />
+								<a href=""><em>已有<strong>3212</strong>条评论</em></a>
+								<a href=""><div class="add_cart"><i class="iconfont icon-konggouwuche"></i>加入购物车</div></a>
+							</li>
+							<li>
+								<a href="">
+									<img class="pro_img" src="../img/section1-pic21.jpg"/>
+									<p>国产油桃 （约500g/份）</p>
+								</a>
+								<span>¥15.60/份</span>
+								<input type="number" value= "1" />
+								<a href=""><em>已有<strong>8520</strong>条评论</em></a>
+								<a href=""><div class="add_cart"><i class="iconfont icon-konggouwuche"></i>加入购物车</div></a>
+							</li>
+							<li>
+								<a href="">
+									<img class="pro_img" src="../img/section1-pic22.jpg"/>
+									<p>云南甜角 （约300g/盒）</p>
+								</a>
+								<span>¥15.60/盒</span>
+								<input type="number" value= "1" />
+								<a href=""><em>已有<strong>3050</strong>条评论</em></a>
+								<a href=""><div class="add_cart"><i class="iconfont icon-konggouwuche"></i>加入购物车</div></a>
+							</li>
+							<li>
+								<a href="">
+									<img class="pro_img" src="../img/section1-pic23.jpg"/>
+									<p>麒麟西瓜（约2kg/个）</p>
+								</a>
+								<span>¥33.60/个</span>
+								<input type="number" value= "1" />
+								<a href=""><em>已有<strong>3420</strong>条评论</em></a>
+								<a href=""><div class="add_cart"><i class="iconfont icon-konggouwuche"></i>加入购物车</div></a>
+							</li>
+							<li>
+								<a href="">
+									<img class="pro_img" src="../img/section1-pic24.jpg"/>
+									<p>四川丰水梨4粒装 （约1kg/份）</p>
+								</a>
+								<span>¥16.60/份</span>
+								<input type="number" value= "1" />
+								<a href=""><em>已有<strong>300</strong>条评论</em></a>
+								<a href=""><div class="add_cart"><i class="iconfont icon-konggouwuche"></i>加入购物车</div></a>
+							</li>
+							<li>
+								<a href="">
+									<img class="pro_img" src="../img/section1-pic25.jpg"/>
+									<p>绿宝香瓜4个/份 (约600-800g/份)</p>
+								</a>
+								<span>¥23.80/份</span>
+								<input type="numeber" value= "1" />
+								<a href=""><em>已有<strong>120</strong>条评论</em></a>
+								<a href=""><div class="add_cart"><i class="iconfont icon-konggouwuche"></i>加入购物车</div></a>
+							</li>-->
+							<div id="page_no">
+								<div id="pre_page" class="page_change p-1">上一页</div>
+								<div id="next_page" class="page_change">1</div>
+								<div id="next_page" class="page_change">2</div>
+								<div id="next_page" class="page_change">3</div>
+								<div id="next_page" class="page_change p-1">下一页</div>
+							</div>
+						</ul>
+					
+					
+				</div>
+			</div>
+		</section>		
+		
+
+		<footer>
+				<div class="foot-pic">
+					<img src="../img/foot-pic.jpg">					
+				</div>
+				<div class="foot-nav">
+					<ul>
+						<li><h1>新手教程</h1></li>
+						<li><a href="">购物流程</a></li>
+						<li><a href="">注册登录</a></li>
+						<li><a href="">账户充值</a></li>
+						<li><a href="">如何提货</a></li>
+						<li><a href="">会员政策</a></li>
+					</ul>
+					<ul>
+						<li><h1>配送方式</h1></li>
+						<li><a href="">配送范围</a></li>
+						<li><a href="">运费标准</a></li>
+					</ul>
+					<ul>
+						<li><h1>支付方式</h1></li>
+						<li><a href="">在线支付</a></li>
+						<li><a href="">账户余额支付</a></li>
+					</ul>
+					<ul>
+						<li><h1>售后服务</h1></li>
+						<li><a href="">退换货政策</a></li>
+						<li><a href="">退换货流程</a></li>
+						<li><a href="">退款</a></li>
+						<li><a href="">投诉建议</a></li>
+					</ul>
+					<ul>
+						<li><h1>帮助信息</h1></li>
+						<li><a href="">安全食品采购指南</a></li>
+						<li><a href="">常见问题</a></li>
+					</ul>
+					<ul>
+						<li><h1>客户端下载</h1></li>
+						<li><img src="../img/foot-code1.jpg"></li>
+						<li><img src="../img/foot-weixinq.jpg"></li>
+					</ul>
+					<ul>
+						<li><h1>关注公社微信</h1></li>
+						<li><img src="../img/foot-code2.jpg"></li>
+		
+						
+					</ul>
+				</div>
+				<div class="foot-bottom">
+					<ul>
+						<li><a href="">简体</a></li>
+						<li><a href="">繁体</a></li>
+						<li><a href="">English</a></li>
+						<li><a href="">常见问题</a></li>
+					</ul>
+			
+					<p>
+						Copyright &copy; 2009-2016 北京沱沱工社生态农业股份有限公司 版权所有 京ICP证100205号 京ICP备09043401号 京公网安备110105019943 食品流通许可证编号SP1101091310024845
+					</p>
+				</div>
+			</footer>	
+		<div class="float-box">
+			<p><a href="cart.html"><i class="iconfont icon-konggouwuche"></i>购物车</a></p>
+			<p><a href=""><i class="iconfont icon-liwu"></i>提货</a></p>
+			<p><a href=""><i class="iconfont icon-lipinqia"></i>礼品卡充值</a></p>
+			<p><a href=""><i class="iconfont icon-kefu"></i>在线客服</a></p>
+			<p><a href="#head"><i class="iconfont icon-arrow-up"></i>回到顶部</a></p>
+		</div>
+	</body>
+	<script type="text/javascript" src="../artTemplate/template-native.js" ></script>
+	<script type="text/javascript" src="../js/jquery/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+	<script type="text/html" id="hotsale_template">
+		<% for (var i = 0, len = hotsales.length; i < len; i++) { 
+			var hotsale = hotsales[i];
+		%>
+			<li>
+				<a href="<%= hotsale.href %>">
+					<img src="<%= hotsale.src %>"/>
+					<em class="btn"><i class="iconfont icon-konggouwuche"></i>加入购物车</em>
+					<p><%= hotsale.name %></p>
+				</a>
+				<span><%= hotsale.price %></span>
+			</li>
+		<% } %>
+	</script>
+	<script type="text/html" id="product_show_template">
+		<% for (var i = 0, len = products.length; i < len; i++) { 
+			var product = products[i];
+		%>
+			<li>
+				<a class="img_name" href="<%= product.href %>">
+					<img class="youji" src=" <%= product.biaoqian %>">
+					<img class="pro_img" src="<%= product.src %>"/>
+					<p><%= product.name %></p>
+				</a>
+				<span>￥<strong><%= product.price %></strong>/份</span>
+				<input class="_num" type="numeber" value= "<%= product.num %>" />
+				<p class="standard" style="display: none;"><%= product.standard %></p>
+				<p class="ishave" style="display: none;"><%= product.ishave %></p>
+				<p class="id" style="display: none;"><%= product.id %></p>
+				<a href="<%= product.pinglunHref %>"><em>已有<strong><%= product.pinglunNnmber %></strong>条评论</em></a>
+				<a class="btn" href="javascript:void(0);"><div class="add_cart"><i class="iconfont icon-konggouwuche"></i>加入购物车</div></a>
+			</li>
+		<% } %>
+	</script>
+	<script>
+		$(function(){
+			$.ajax({
+				url : "../json/kinds_hotsale.json",
+				type : "get",
+				dataType : "json",
+				success : function(responseData){
+					var data = {
+						hotsales: responseData
+					};
+					var html = template("hotsale_template", data);
+					//console.log(html);
+					$(".hotsale").append(html);
+				}
+			});
+			$.ajax({
+				url : "../json/kinds_products.json",
+				type : "get",
+				dataType : "json",
+				success : function(responseData){
+					var data = {
+						products: responseData
+					};
+					var html = template("product_show_template", data);
+					console.log(html);
+					$("#sortCard").after(html);
+				}
+			});
+		//点击右侧商品添加到购物车
+		$(".sec-right-show").delegate(".btn","click",function(){
+			var prod_name = $(this).siblings(".img_name").children("p").text(),
+				prod_standard = $(this).siblings(".standard").text(),
+				prod_price = $(this).siblings("span").children("strong").text(),
+				prod_src = $(this).siblings(".img_name").children(".pro_img").attr("src"),
+				prod_num = $(this).siblings("._num").val(),
+				prod_ishave = $(this).siblings(".ishave").text(),
+				prod_id = $(this).siblings(".id").text();
+			console.log(prod_id);
+			var cart = {
+				name : prod_name,
+				standard : prod_standard,
+				price : prod_price,
+				src : prod_src,
+				num : prod_num,
+				ishave:prod_ishave,
+				id:prod_id
+			};
+			$.cookie.json = true;
+			var _cartProd=$.cookie("cartProd")||[];
+			var _index = indexOf(cart.id, _cartProd);
+			//console.log(_index);
+				if (_index === -1) { // 以前未选购
+					_cartProd.push(cart);
+				} else { // 以前有选购当前的商品
+					//console.log("以前选购过");
+					_cartProd[_index].num++;
+				}
+
+			console.log(_cartProd);
+			$.cookie("cartProd",_cartProd,{expires:7});
+			})
+		
+			function indexOf(id, products) {
+				for (var i = 0, len = products.length; i < len; i++) {
+					if (id === products[i].id)
+						return i;
+				}
+				return -1;
+			}
+		})
+	</script>
+</html>

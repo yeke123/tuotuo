@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>沱沱工社 - 首页</title>
+				
+		<link rel="stylesheet" type="text/css" href="css/index-style.css"/>
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>	
+		<link rel="stylesheet" href="css/header-style.css" />
+		<link rel="stylesheet" href="css/footer-style.css" />
+		<link rel="stylesheet" href="css/float-style.css" />
+		<script type="text/javascript" src="js/jquery/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="artTemplate/template-native.js" ></script>
+		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+	</head>
+	<body>
+		<div id="opacityBox"></div>
+		<div id="add">
+			<div id="add-header">请选择您的收货城市！</div>
+				<ul id="add_body_city">
+					<li>
+						<strong>热门：</strong>
+							<p>
+								<a>北京</a>
+								<a>上海</a>
+								<a>天津</a>
+							</p>
+					</li>
+					<li>
+						<strong>山东：</strong>
+							<p>
+								<a>济南</a>
+								<a>青岛</a>
+								<a>烟台</a>
+								<a>潍坊</a>
+								<a>临沂</a>
+								<a>淄博</a>
+								<a>济宁</a>
+								<a>泰安</a>
+								<a>聊城</a>
+								<a>威海</a>
+								<a>枣庄</a>
+								<a>德州</a>
+								<a>日照</a>
+								<a>东营</a>
+								<a>菏泽</a>
+								<a>滨州</a>
+								<a>莱芜</a>
+							</p>
+					</li>
+					<li>
+						<strong>江苏：</strong>
+						<p>
+							<a>南京</a>
+							<a>苏州</a>
+							<a>无锡</a>
+							<a>常州</a>
+							<a>徐州</a>
+							<a>南通</a>
+							<a>扬州</a>
+							<a>盐城</a>
+							<a>淮安</a>
+							<a>连云港</a>
+							<a>泰州</a>
+							<a>宿迁</a>
+							<a>镇江</a>
+						</p>
+					</li>
+					<li>
+						<strong>浙江：</strong>
+						<p>
+							<a>杭州</a>
+							<a>宁波</a>
+							<a>温州</a>
+							<a>金华</a>
+							<a>嘉兴</a>
+							<a>台州</a>
+							<a>绍兴</a>
+							<a>湖州</a>
+							<a>丽水</a>
+							<a>衢州</a>
+							<a>舟山</a>
+						</p>
+					</li>
+					<li>
+						<strong>河南：</strong>
+						<p>
+							<a>郑州</a>
+							<a>洛阳</a>
+							<a>新乡</a>
+							<a>南阳</a>
+							<a>许昌</a>
+							<a>平顶山</a>
+							<a>安阳</a>
+							<a>焦作</a>
+							<a>商丘</a>
+							<a>开封</a>
+							<a>濮阳</a>
+							<a>周口</a>
+							<a>信阳</a>
+							<a>驻马店</a>
+							<a>漯河</a>
+							<a>三门峡</a>
+							<a>鹤壁</a>
+							<a>济源</a>
+						</p>
+					</li>
+					<li>
+						<strong>辽宁：</strong>
+						<p>
+							<a>沈阳</a>
+							<a>大连</a>
+							<a>鞍山</a>
+							<a>锦州</a>
+							<a>抚顺</a>
+							<a>营口</a>
+							<a>盘锦</a>
+							<a>朝阳</a>
+							<a>丹东</a>
+							<a>辽阳</a>
+							<a>本溪</a>
+							<a>葫芦岛</a>
+							<a>铁岭</a>
+							<a>阜新</a>
+						</p>
+					</li>
+					<li>
+						<strong>河北：</strong>
+						<p>
+							<a>石家庄</a>
+							<a>保定</a>
+							<a>唐山</a>
+							<a>廊坊</a>
+							<a>邯郸</a>
+							<a>秦皇岛</a>
+							<a>沧州</a>
+							<a>邢台</a>
+							<a>衡水</a>
+							<a>张家口</a>
+							<a>承德</a>
+						</p>
+					</li>
+					<li><strong>山西：</strong>
+						<p>
+							<a>太原</a>
+							<a>临汾</a>
+							<a>大同</a>
+							<a>运城</a>
+							<a>晋中</a>
+							<a>长治</a>
+							<a>晋城</a>
+							<a>阳泉</a>
+							<a>吕梁</a>
+							<a>忻州</a>
+							<a>朔州</a>
+						</p>
+					</li>
+				</ul>
+			</div>
+		<div id="head"></div>
+		<header>
+			<div class="headerbox">
+				<div class="headerbox-left">
+					<ul>
+						<li>欢迎光临沱沱工社！</li>
+						<li id="onload"><a href="html/login.html"><i class="iconfont icon-denglu"></i>登录</a></li>
+						<li id="enroll"><a href="html/enroll.html"><i class="iconfont icon-zhuce"></i>注册</a></li>
+						<li>
+							<span>送货至：</span><input id="showAdd" type="text" value="请选择">
+							
+						</li>
+					</ul>
+				</div>
+				<div class="headerbox-right">
+					<ul>
+						<li><a href=""><i class="iconfont icon-shouji"></i>手机沱沱</a></li>
+						<li><a href=""><i class="iconfont icon-order"></i>我的沱沱</a></li>
+						<li><a href="cart.html"><i class="iconfont icon-lipinqia"></i>充值</a></li>
+						<li><a href="">提货</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div class="search">
+			<div class="searchbox">
+				<a href="index.html" class="logo"><img src="img/logo.png"></a>
+				<div class="sea-box">
+					<form>
+						<input id="searchBox"  type="text" value="" placeholder=" 有机蔬菜"/>
+						<div id="suggest"></div>
+						<a href="">搜 索</a>
+					</form>
+					<ul>
+						<li>热门搜索:</li>
+						<li><a href="">奇异果</a></li>
+						<li><a href="">有机蔬菜</a></li>
+						<li><a href="">黄金蟹</a></li>
+						<li><a href="">燕窝</a></li>
+						<li><a href="">土鸡蛋</a></li>
+						
+					</ul>
+				</div>
+				<div class="searchbox-right">
+					<img src="img/search-bianzhun.jpg">
+				</div>
+			</div>
+		</div>
+		<div class="nav">
+			<ul>
+				<li>全部商品分类</li>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="fruitKinds.html"><i><img src="img/baoyou.png"></i>沱沱团</a></li>
+				<li><a href="meatKinds.html">沱沱礼品</a></li>
+				<li><a href="seafoodKinds.html"><i><img src="img/hotsale.gif"></i>宅配卡</a></li>
+				<li><a href="milkKinds.html">沱沱农场</a></li>
+				<li><a href="oilKinds.html">入驻沱沱</a></li>
+			</ul>
+			<ul>
+				<li>
+					<em>
+						<i class="iconfont icon-yjsp"></i>
+						<a href="">有机食品</a>
+						<span>&gt;</span>
+					</em>
+					<ul class="menu2">
+						<li>
+							<p><a href="">有机蔬菜水果</a></p>
+							<a href="">有机蔬菜</a>
+							<a href="">有机水果</a>
+						</li>
+						<li>
+							<p><a href="">有机肉禽蛋奶</a></p>
+							<a href="">有机奶</a>
+							<a href="">有机蛋类</a>
+							<a href="">有机猪肉</a>
+							<a href="">有机牛羊肉</a>
+						</li>
+						<li>
+							<p><a href="">有机粮油副食</a></p>
+							<a href="">有机米/面/杂粮</a>
+							<a href="">有机食用油/干货/调味品</a>
+						</li>
+						<li>
+							<p><a href="">有机休食冲饮</a></p>
+							<a href="">有机休食冲饮</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<em>
+						<i class="iconfont icon-shuiguoshengxian-px"></i>
+						<a href="html/fruitKinds.html">蔬菜水果</a>
+						<span>&gt;</span>
+					</em>
+					<ul class="menu2">
+						<li>
+							<p><a href="">蔬菜类</a></p>
+							<a href="">有机蔬菜</a>
+							<a href="">地方特产蔬菜/菌类</a>
+							<a href="">沱沱农场自产蔬菜</a>
+						</li>
+						<li>
+							<p><a href="">水果类</a></p>
+							<a href="">有机水果</a>
+							<a href="">国产水果</a>
+							<a href="">进口水果</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<em>
+						<i class="iconfont icon-roulei"></i>
+						<a href="">肉类禽蛋</a>
+						<span>&gt;</span>
+					</em>
+					<ul class="menu2">
+						<li>
+							<p><a href="">牛羊肉</a></p>
+							<a href="">有机牛羊肉</a>
+							<a href="">进口牛羊肉</a>
+							<a href="">精品牛羊肉</a>
+						</li>
+						<li>
+							<p><a href="">猪肉</a></p>
+							<a href="">有机猪肉</a>
+							<a href="">进口猪肉</a>
+							<a href="">国产猪肉</a>
+							<a href="">农场自养猪肉</a>
+						</li>
+						<li>
+							<p><a href="">禽类</a></p>
+							<a href="">有机禽类</a>
+							<a href="">三样禽类</a>
+						</li>
+						<li>
+							<p><a href="">蛋类</a></p>
+							<a href="">有机蛋类</a>
+							<a href="">散养蛋类</a>
+						</li>
+						<li>
+							<p><a href="">牛排/半成品</a></p>
+							<a href="">牛排/半成品</a>
+						</li>
+						<li>
+							<p><a href="">中西式熟食</a></p>
+							<a href="">中西式熟食</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<em>
+						<i class="iconfont icon-haixian"></i>
+						<a href="">海鲜水产</a>
+						<span>&gt;</span>
+					</em>
+					<ul class="menu2">
+						<li>
+							<p><a href="">鱼/虾</a></p>
+							<a href="">虾</a>
+							<a href="">鱼</a>
+						</li>
+						<li>
+							<p><a href="">参/贝/蟹/海菜</a></p>
+							<a href="">参/贝/蟹/海菜</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<em>
+						<i class="iconfont icon-nlsp"></i>
+						<a href="">奶类/烘焙</a>
+						<span>&gt;</span>
+					</em>
+					<ul class="menu2">
+						<li>
+							<p><a href="">奶制品</a></p>
+							<a href="">有机奶</a>
+							<a href="">牛奶/酸奶</a>
+							<a href="">奶酪/黄油</a>
+						</li>
+						<li>
+							<p><a href="">烘焙/面点</a></p>
+							<a href="">烘焙/面点</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<em>
+						<i class="iconfont icon-liangyou"></i>
+						<a href="">粮油副食</a>
+						<span>&gt;</span>
+					</em>
+					<ul class="menu2">
+						<li>
+							<p><a href="">米/面/杂粮</a></p>
+							<a href="">有机米/面/杂粮</a>
+							<a href="">米</a>
+							<a href="">面粉/面条</a>
+							<a href="">杂粮</a>
+							<a href="">沱沱自有</a>
+						</li>
+						<li>
+							<p><a href="">油/干货/调味</a></p>
+							<a href="">有机食用油/干货/调味</a>
+							<a href="">食用油</a>
+							<a href="">干货</a>
+							<a href="">调味品</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<em>
+						<i class="iconfont icon-yinpin2"></i>
+						<a href="">休闲冲饮</a>
+						<span>&gt;</span>
+					</em>
+					<ul class="menu2">
+						<li>
+							<p><a href="">冲调品/休食</a></p>
+							<a href="">有机休食冲饮</a>
+							<a href="">蜂蜜/麦片</a>
+							<a href="">果汁/茶</a>
+							<a href="">特色食品</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="banner">
+			<ul id="imgbox">
+				<li><img src="img/banner1.jpg"></li>
+				<li><img src="img/banner2.jpg"></li>
+				<li><img src="img/banner3.jpg"></li>
+				<li><img src="img/banner4.jpg"></li>
+				<li><img src="img/banner5.jpg"></li>
+			</ul>
+			<p id="pages"></p>
+			<a id="prev" class="arrow">&lt;</a>
+			<a id="next" class="arrow">&gt;</a>
+			<div id="banner-ad">
+				<a><img src="img/banner-right-ad.jpg"></a>
+			</div>
+		</div>
+		
+		<div class="ad">
+			<a class="pre" id="salegoodsLeft" href="javascript:void(0)">&lt;</a>
+			<div class="ad_container">
+				<ul></ul><!--广告滑动页面-->
+			</div>
+			<a class="pre" id="salegoodsRight" href="javascript:void(0)">&gt;</a>
+		</div>
+		
+		
+		<section>
+				<div class="fruit kinds"> <!-- -->
+					<div class="sec-nav">
+						<h2><i class="iconfont icon-shuiguoshengxian-px"></i>蔬菜水果</h2>
+						<ul>
+							<input type="radio" name="shucai-change" id="s-1" value="" checked="checked" >
+							<li class="nav"><label for="s-1">特惠专区</label></li>
+							<input type="radio" name="shucai-change" id="s-2" value="" >
+							<li class="nav"><label for="s-2">有机蔬菜</label></li>
+							<input type="radio" name="shucai-change" id="s-3" value="" >							
+							<li class="nav"><label for="s-3">国产水果</label></li>
+							<input type="radio" name="shucai-change" id="s-4" value="" >
+							<li class="nav"><label for="s-4">进口水果</label></li>
+							
+							<div class="content-box-right">
+								<div class="cbr tehui" id="tehui">
+									<ul></ul>
+								</div><!--蔬菜水果 特惠  页面-->
+								
+								<div class="cbr cbr1" id="shucai">
+									<ul></ul>
+								</div><!--蔬菜水果 有机蔬菜  页面-->
+								
+								<div class="cbr cbr2" id="guochan">
+									<ul></ul>
+								</div><!--蔬菜水果 国产水果  页面-->
+								
+								<div class="cbr cbr3" id="jinkou">
+									<ul></ul>
+								</div><!--蔬菜水果 进口水果  页面-->
+								
+							</div>		
+						</ul>					
+					</div>								
+					<div class="content-box-left">
+						<img src="img/section-pic1.jpg"/>
+					</div>											
+				</div>
+				<div class="meat kinds">
+					<div class="sec-nav">
+						<h2><i class="iconfont icon-roulei"></i>肉类禽蛋</h2>
+						<ul>
+							<input type="radio" name="roulei-change" id="r-1" value="" checked="checked" >
+							<li class="nav"><label for="r-1">特惠专区</label></li>
+							<input type="radio" name="roulei-change" id="r-2" value="" >
+							<li class="nav"><label for="r-2">禽蛋</label></li>
+							<input type="radio" name="roulei-change" id="r-3" value="" >							
+							<li class="nav"><label for="r-3">肉类</label></li>
+							
+							<div class="content-box-right">
+								<div class="cbr  tehui" id="tehui1">
+									<ul></ul>
+								</div><!--肉类禽蛋 特惠  页面-->
+								
+								<div class="cbr cbr1" id="qindan">
+									<ul></ul>
+								</div><!--肉类禽蛋 禽蛋  页面-->
+								
+								<div class="cbr cbr2" id="roulei">
+									<ul></ul>
+								</div><!--肉类禽蛋 肉类 页面-->
+								
+								
+							</div>
+						</ul>					
+					</div>								
+					<div class="content-box-left">
+						<img src="img/section-pic2.jpg"/>
+					</div>											
+				</div>
+				<div class="seafoot kinds">
+					<div class="sec-nav">
+						<h2><i class="iconfont icon-haixian"></i>海鲜水产</h2>
+						<ul>
+							<input type="radio" name="roulei-change" id="h-1" value="" checked="checked" >
+							<li class="nav"><label for="h-1">特惠专区</label></li>
+							<input type="radio" name="roulei-change" id="h-2" value="" >
+							<li class="nav"><label for="h-2">鱼类</label></li>
+							<input type="radio" name="roulei-change" id="h-3" value="" >							
+							<li class="nav"><label for="h-3">虾类</label></li>
+							<input type="radio" name="roulei-change" id="h-4" value="" >
+							<li class="nav"><label for="h-4">蟹/贝</label></li>
+							
+							<div class="content-box-right">
+								<div class="cbr  tehui" id="tehui2">
+									<ul></ul>
+								</div><!--海鲜水产 特惠  页面-->
+								<div class="cbr cbr1" id="yulei">
+									<ul></ul>
+								</div><!--海鲜水产 鱼类  页面-->
+								<div class="cbr cbr2" id="xialei">
+									<ul></ul>
+								</div><!--海鲜水产 虾类  页面-->
+								<div class="cbr cbr3" id="xielei">
+									<ul></ul>
+								</div><!--海鲜水产 蟹类  页面-->
+							</div>
+						</ul>					
+					</div>								
+					<div class="content-box-left">
+						<img src="img/section-pic3.jpg"/>
+					</div>											
+				</div>
+				<div class="milk kinds">
+					<div class="sec-nav">
+						<h2><i class="iconfont icon-nlsp"></i>奶类烘焙</h2>
+						<ul>
+							<input type="radio" name="roulei-change" id="n-1" value="" checked="checked" >
+							<li class="nav"><label for="n-1">特惠专区</label></li>
+							<input type="radio" name="roulei-change" id="n-2" value="" >							
+							<li class="nav"><label for="n-2">乳类烘焙</label></li>
+							
+							<div class="content-box-right">
+								<div class="cbr  tehui" id="tehui3">
+									<ul></ul>
+								</div><!--奶类烘焙 特惠  页面-->
+								<div class="cbr cbr1" id="hongbei">
+									<ul></ul>
+								</div><!--奶类烘焙 烘焙专区  页面-->
+							</div>
+						</ul>					
+					</div>								
+					<div class="content-box-left">
+						<img src="img/section-pic4.jpg"/>
+					</div>											
+				</div>
+				<div class="oil kinds">
+					<div class="sec-nav">
+						<h2><i class="iconfont icon-liangyou"></i>粮油副食</h2>
+						<ul>
+							<input type="radio" name="roulei-change" id="l-1" value="" checked="checked" >
+							<li class="nav"><label for="l-1">特惠专区</label></li>
+							<input type="radio" name="roulei-change" id="l-2" value="" >
+							<li class="nav"><label for="l-2">米面油</label></li>
+							<input type="radio" name="roulei-change" id="l-3" value="" >							
+							<li class="nav"><label for="l-3">干货调味</label></li>
+							
+							<div class="content-box-right">
+								<div class="cbr  tehui" id="tehui4">
+									<ul></ul>
+								</div><!--粮油副食 特惠  页面-->
+								<div class="cbr cbr1" id="mimianyou">
+									<ul></ul>
+								</div><!--粮油副食 米面油  页面-->
+								
+								<div class="cbr cbr2" id="ganhuo">
+									<ul></ul>
+								</div><!--粮油副食 干货  页面-->
+							</div>
+						</ul>					
+					</div>								
+					<div class="content-box-left">
+						<img src="img/section-pic5.jpg"/>
+					</div>											
+				</div>
+				
+		</section>
+	
+		<footer>
+			<div class="foot-pic">
+				<img src="img/foot-pic.jpg">					
+			</div>
+			<div class="foot-nav">
+				<ul>
+					<li><h1>新手教程</h1></li>
+					<li><a href="">购物流程</a></li>
+					<li><a href="">注册登录</a></li>
+					<li><a href="">账户充值</a></li>
+					<li><a href="">如何提货</a></li>
+					<li><a href="">会员政策</a></li>
+				</ul>
+				<ul>
+					<li><h1>配送方式</h1></li>
+					<li><a href="">配送范围</a></li>
+					<li><a href="">运费标准</a></li>
+				</ul>
+				<ul>
+					<li><h1>支付方式</h1></li>
+					<li><a href="">在线支付</a></li>
+					<li><a href="">账户余额支付</a></li>
+				</ul>
+				<ul>
+					<li><h1>售后服务</h1></li>
+					<li><a href="">退换货政策</a></li>
+					<li><a href="">退换货流程</a></li>
+					<li><a href="">退款</a></li>
+					<li><a href="">投诉建议</a></li>
+				</ul>
+				<ul>
+					<li><h1>帮助信息</h1></li>
+					<li><a href="">安全食品采购指南</a></li>
+					<li><a href="">常见问题</a></li>
+				</ul>
+				<ul>
+					<li><h1>客户端下载</h1></li>
+					<li><img src="img/foot-code1.jpg"></li>
+					<li><img src="img/foot-weixinq.jpg"></li>
+				</ul>
+				<ul>
+					<li><h1>关注公社微信</h1></li>
+					<li><img src="img/foot-code2.jpg"></li>
+					
+				</ul>
+			</div>
+			<div class="foot-bottom">
+				<ul>
+					<li><a href="">简体</a></li>
+					<li><a href="">繁体</a></li>
+					<li><a href="">English</a></li>
+					<li><a href="">常见问题</a></li>
+				</ul>
+		
+				<p>
+					Copyright &copy; 2009-2016 北京沱沱工社生态农业股份有限公司 版权所有 京ICP证100205号 京ICP备09043401号 京公网安备110105019943 食品流通许可证编号SP1101091310024845
+				</p>
+			</div>
+		</footer>	
+	
+		
+		<div class="float-box">
+			<p><a href="html/cart.html"><i class="iconfont icon-konggouwuche"></i>购物车</a></p>
+			<p><a href=""><i class="iconfont icon-liwu"></i>提货</a></p>
+			<p><a href=""><i class="iconfont icon-lipinqia"></i>礼品卡充值</a></p>
+			<p><a href=""><i class="iconfont icon-kefu"></i>在线客服</a></p>
+			<p><a href="#head"><i class="iconfont icon-arrow-up"></i>回到顶部</a></p>
+		</div>
+		
+		<ul id="menu">
+			<li>1L<span style="display: block;">蔬菜<br>水果</span></li>
+			<li>2L<span>肉类<br>禽蛋</span></li>
+			<li>3L<span>海鲜<br>水产</span></li>
+			<li>4L<span>奶类<br>烘焙</span></li>
+			<li>5L<span>粮油<br>副食</span></li>
+		</ul>
+	
+	<script type="text/html" id="index_template">
+		<% for (var i = 0, len = products.length; i < len; i++) { 
+			var prod = products[i];
+		%>
+			<li>
+				<a href="<%= prod.href %>">
+					<img src="<%= prod.src %>"> 
+					<%= prod.name %>
+				</a>
+				<span><%= prod.price %></span>
+			</li>
+		<% } %>
+		
+	</script>
+	<script type="text/html" id="ads_template">
+		<% for (var i = 0, len = ads.length; i < len; i++) { 
+			var ad = ads[i];
+		%>
+			<li>
+				<a href="<%= ad.href %>" title="<%= ad.title%>"><img style="left: 0px; display: block;" src="<%= ad.src %>"></a>
+			</li>
+		<% } %>
+	</script>
+	</body>
+	
+</html>

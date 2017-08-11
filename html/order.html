@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>沱沱工社 - 提交订单</title>
+		<link rel="stylesheet" type="text/css" href="../font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/order-style.css"/>
+		<script type="text/javascript" src="../js/jquery/jquery-1.12.4.min.js" ></script>
+		<script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+		<script type="text/javascript" src="../artTemplate/template-native.js" ></script>
+	</head>
+	<body>
+		<div class="bigbox">
+			<header>
+				<div class="logo"><img src="../img/xlogo.png"></div>	
+				<p>提交订单</p>
+				<div id="cart_step">
+					<img src="../img/cart_setp_09.png" />
+					<img src="../img/cart_setp_20.png" />
+					<img src="../img/cart_setp_3.png" />
+					<img src="../img/cart_setp_4.png" />
+				</div>
+			</header>
+			<span id="_span">确认订单</span>
+			<p class="explain"><img src="../img/cart_zf_ts.jpg">说明：促销优惠和运费按同一订单计算，分开提交的订单则会重新计算促销优惠和运费！</p>
+			
+			<div class="infor_box _box">
+				<p>收货人信息</p>
+				<form id="recipient_infor" method="post">
+					<em>收 货 人&nbsp;：</em><input type="text" name="" id="name" value="" /><br>
+					<em>所在地区：</em>
+					<select id="pro"></select>
+					<select id="city"></select>
+					<select id="dis"></select>
+					<span>请选择正确的区域，以免无法配送导致订单被取消，影响您正常收货。</span><br>
+					<em>详细地址：</em><input id="add" type="text" /><br>
+					<em>手机号码：</em><input id="tel" type="text" /><br>
+					<input type="submit" value="保存收货人信息"/>
+				</form>
+				<div id="newRecipient">添加新收货地址</div>
+			</div>
+
+			<div class="pay_way _box">
+				<p>支付方式</p>
+				<input class="page1" type="radio" name="payway" title="微信支付" id="weiPay" value="" checked="checked">
+				<label class="page1" for="weiPay"><img src="../img/weixinzhifu.png"></label>
+				<input class="page1" type="radio" name="payway" title="支付宝支付" id="zfbPay" value="">
+				<label class="page1" for="zfbPay"><img src="../img/cart_zfb.jpg"></label>	
+				<input class="page1" type="radio" name="payway" title="QQ钱包支付" id="qqPay" value="">
+				<label class="page1" for="qqPay"><img src="../img/bank_img_qq.png"></label>
+				<span class="page2">您选择的支付方式为：</span>
+				<input class="page2"  type="text" id="_way" value="">
+				<span class="page2 intro">订单支付说明：<br>选择在线支付时，含预订或秒杀商品订单、沱沱惠订单，需在1小时内完成支付，其他订单需在24小时内完成支付，超时未支付将视为自动取消订单。</span>
+				<a id="other" class="page2">其他支付方式</a>
+				<div class="page1" id="sure">确认支付方式</div>
+			</div>
+			
+			<div id="cart-list">
+				<div class="title buy-box">
+					<div>商品名称</div>
+					<div>规格</div>
+					<div>库存状态</div>
+					<div>沱沱价</div>
+					<div>数量</div>
+					<div>金额</div>
+				</div>
+				
+				<footer>
+					<p id="total">合计：共<em id="total_num">10</em>件商品&nbsp;共计<em id="total_price">25</em>元</p>
+				</footer>
+			</div>
+			
+			<div class="_submit">
+				<a id="back_cart" href="cart.html">回到购物车</a>
+				<button>提交订单</button>
+			</div>
+			
+		</div>	
+			<div class="footer">
+			<ul>
+				<li><a href="">简体</a></li>
+				<li><a href="">繁体</a></li>
+				<li><a href="">English</a></li>
+				<li><a href="">常见问题</a></li>
+			</ul>
+			
+			<p>
+				Copyright &copy; 2009-2016 北京沱沱工社生态农业股份有限公司 版权所有 京ICP证100205号 京ICP备09043401号 京公网安备110105019943 食品流通许可证编号SP1101091310024845
+			</p>
+	
+	<script type="text/html" id="orderProd_template">
+		<% for (var i = 0, len = products.length; i < len; i++) { 
+			var prod = products[i];
+		%>
+			<div class="body buy-box">
+	 				<div>
+	 					<img src="<%= prod.src %>">
+	 					<span><%= prod.name %></span>
+	 				</div>
+	 				<div><%= prod.standard%></div>	
+	 				<div>有货</div>	 
+	 				<div><%= prod.price %></div>
+	 				<div class="num"><%= prod.num %></div>
+	 				<div class="_price"><%= prod.price *100 * prod.num /100%></div>
+				</div>
+		<% } %>
+		
+	</script>
+	<script>
+		$(function(){
+			/*$.ajax({
+				url : "../json/cart_products.json",
+				type : "get",
+				dataType : "json",
+				success : function(responseData){
+					var data = {
+						products : responseData
+					};
+					var html = template("orderProd_template", data);
+					//console.log(html);
+					$(".title").after(html);
+				}
+			});*/
+			/*获取商品cookie*/
+			$.cookie.json=true;
+			var _products=$.cookie("order");
+			console.log(_products);
+			var data={
+				products:_products
+			}
+			var html=template("orderProd_template",data);
+			console.log(html);
+			$(".title").after(html);
+			
+			//合计行信息计算
+			var total_num = 0,
+			    total_price = 0;
+ 			$(".buy-box").each(function(index,element){
+ 				//alert("合算合算");
+ 				total_num += Number($(element).children(".num").text());
+ 				total_price += Number($(element).children("._price").text())
+ 				console.log(total_num,total_price);
+ 			});
+			$("#total_num").text(total_num);
+			$("#total_price").text(total_price);
+			
+				
+			
+			// 读取 cookie 中保存的收货地址，填充回页面文本框
+			$.cookie.json = true; // 自动在对象与字符串之间解析转换
+			var _address = $.cookie("address") || [];
+			if (_address !== null) {
+				console.log("cookie不为空");
+				var html = "<div class='address'>"+_address._name+","+_address._pro+","+_address._city+","+_address._dis+","+_address._add+","+_address._tel +"</div>";
+				$("form").after(html);
+				$(".address").show();
+			}
+			//新收货地址
+			$("#newRecipient").click(function(){
+				//console.log("6666");
+				$("form").show();
+				$("#newRecipient").hide();
+				$(".address").hide();
+			});
+			
+		//省市区县三级级联
+		var address={};
+		$.getJSON("addresses.json",function(data){
+			$(data.regions).each(function(index,pro){
+				address[pro.name]={};
+				$(pro.regions).each(function(index,city){
+					address[pro.name][city.name]=city.regions;
+				})
+			})
+
+				initpro();
+		})
+		function initpro(){//初始化省份
+			var html=""
+			for(var proname in address){
+				html+="<option value='"+proname+"'>"+proname+"</option>";
+			}
+			$("#pro").append(html);
+			initcity();
+		}
+		function initcity(){//初始化城市
+			var _pro = $("#pro").val(),
+				cities = address[_pro];
+				var html=""
+			for(var cityname in cities){
+				html+="<option value='"+cityname+"'>"+cityname+"</option>";
+			}
+			$("#city").empty().append(html);
+			initdis();
+		}
+		function initdis(){
+			var _pro=$("#pro").val(),
+				_city=$("#city").val(),
+				_dis=address[_pro][_city];
+			var html = "";
+			_dis.forEach(function(district){
+			html += "<option value='"+ district.name +"'>"+ district.name +"</option>";
+		})
+			$("#dis").empty().append(html);
+		}
+		//当省份发生改变 城市加载
+		$("#pro").on("change",initcity);
+		$("#city").on("change", initdis);
+			
+			//保存收货人信息
+			$("form").submit(function(event){
+				console.log("保存收货人信息");
+				event.preventDefault();
+				// 获取姓名、地区、详细地址以及手机号码
+				var _name = $("#name").val(),
+					_pro = $("#pro").val(),
+					_city = $("#city").val(),
+					_dis = $("#dis").val(),
+					_add = $("#add").val(), 
+					_tel = $("#tel").val();
+				$("#recipient_infor").hide();
+				$.cookie("address", {_name,_pro,_city,_dis,_add,_tel}, {expires:7});
+				var _address = $.cookie("address");
+				//console.log(_address);
+				var html = "<div class='address' style='border:1px solid #F56600'>"+ _address._name+","+_address._pro+","+_address._city+","+_address._dis+","+_address._add+","+_address._tel +"</div>";
+				$("form").after(html);
+				$(".address").show();
+				$("#newRecipient").show();
+			});
+			
+			/*$(".address").click(function(){
+				console.log("点击地址");
+				$(this).css("border","1px solid #F56600");	
+				$(this).siblings(".address").css("border","1px solid #ccc");
+				$(".infor_box").css("border","1px solid #ccc");
+			})*/
+			
+			//点击地址，地址框变色以视选中
+			$(".infor_box").delegate(".address","click",function(){
+				console.log("点击地址");
+				$(this).css("border","1px solid #F56600");	
+				$(this).siblings(".address").css("border","1px solid #ccc");
+				$(".infor_box").css("border","1px solid #ccc");
+			})
+			
+			//选择支付方式后点击确认支付方式
+			$("#sure").click(function(){
+				$(".page1").hide();
+				$(".page2").show();
+				//var _way = $("input[checked='checked']").attr("title");
+				var _way =$('input:radio[name="payway"]:checked').attr("title")
+				//console.log(_way);
+				$("#_way").val(_way);
+				$(".pay_way").css("border","1px solid #ccc");
+			});
+			
+			//更换支付方式
+			$("#other").click(function(){
+				$(".page2").hide();
+				$(".page1").show();
+				$(".pay_way").css("border","1px solid #f56600");
+			});
+				
+			
+		})
+	</script>
+	</body>
+	
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/login-style.css"/>
+		<link rel="stylesheet" href="../font/iconfont.css" />
+		<title>沱沱工社 - 登录</title>
+		
+	</head>
+	<body>
+		
+		<!--头部-->
+		<div class="header">
+			<a href="../index.html"><img src="../img/logo.png"/></a>
+			<p>欢迎加入沱沱工社</p>
+		</div>	
+		
+		<!--主体-->
+		<div class="main">
+			<img src="../img/login-bg.jpg">
+			<div class="form">
+				<ul class="login_title">
+                    	<li class="fl_l"><h2>用户登录</h2></li>
+                        <li class="fl_r"><span>没有沱沱账号？<a href="enroll.html">立即注册&gt;</a></span></li>
+                </ul>
+                <div id="tel"><i class="iconfont icon-shouji"></i>短信快捷登录</div>
+                <form action="../index.html" method="get" id="form">
+					<input class="input" type="text" name="" id="username" placeholder="请输入手机号码/卡号" form="form" />
+					<p class="username_test _test">请输入正确格式的用户名</p>
+					<p class="_right _right1">√</p>
+					<input class="input" type="password" name="" id="password" placeholder="请输入密码" form="form" />
+					<p class="password_test _test">请输入正确密码</p>
+					<p class="_right _right2">√</p>
+					<input type = "checkbox" id="login_chec" checked="checked"/><em>记住用户名及密码</em>
+					<a>忘记密码？</a>
+					<input class="sumbit" type="submit" id="login" value="立即登录"></input>
+				</form>
+				<div id="otherWay">
+					<div id="otherWayBox"></div>
+					<p>使用合作网站方式登录沱沱公社</p>
+					<a href="" id="zfb"></a>
+					<a href="" id="QQ"></a>
+					<a href="" id="sina"></a>
+				</div>
+			</div>	
+		</div>
+		
+		<!--尾部-->
+		<div class="footer">
+			<ul>
+				<li><a href="">简体</a></li>
+				<li><a href="">繁体</a></li>
+				<li><a href="">English</a></li>
+				<li><a href="">常见问题</a></li>
+			</ul>
+			
+			<p>
+				Copyright &copy; 2009-2016 北京沱沱工社生态农业股份有限公司 版权所有 京ICP证100205号 京ICP备09043401号 京公网安备110105019943 食品流通许可证编号SP1101091310024845
+			</p>
+		</div>
+		
+		
+	</body>
+	<script type="text/javascript" src="../js/jquery/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+	<script>
+		$(function(){
+			
+			// 读取 cookie 中保存的用户名，填充回页面文本框
+			$.cookie.json = true; // 自动在对象与字符串之间解析转换
+			var _user = $.cookie("user")||[];
+			if (_user !== null) {
+				$("#username").val(_user.username);
+				$("#password").val(_user.password);
+			}
+			
+			var reg_u=/^1[34578]\d{9}$/,
+				reg_p=/^[a-z0-9_-]{6,20}$/,
+				istrue=true;//判断输入的信息是否正确
+			//验证用户名是否合法
+			$("#username").blur(function(){
+				var _username=$(this).val();
+				if (!reg_u.test(_username)){
+					$(".username_test").addClass("show");
+					$("._right1").removeClass("show");	
+					istrue=false;
+				}else{
+					$("._right1").addClass("show");	
+					$(".username_test").removeClass("show");
+					istrue=true;
+				}
+			});
+			//验证密码是否合法
+			$("#password").blur(function(){
+				_password=$(this).val();
+				if (!reg_p.test(_password)){
+					$(".password_test").addClass("show");
+					$("._right2").removeClass("show");	
+					istrue=false;
+				}else{
+					$("._right2").addClass("show");	
+					$(".password_test").removeClass("show");
+					istrue=true;
+				}
+			});
+
+			//判断是否记住用户名及密码
+			$("form").submit(function(event){
+			//	event.preventDefault();
+				// 获取用户名、密码、是否记住用户名
+				var _username = $("#username").val(),
+					_password = $("#password").val(),
+					_remember = $("input[type='checkbox']").prop("checked"); 
+				var user = {
+					username:_username,
+					password:_password
+				};
+				console.log(user);
+				//console.log(_remember);
+				// 判断是否记住用户名
+				if (_remember) { // 记住
+					// 保存用户名到 cookie 中
+					$.cookie("user",user, {expires:7});
+				} else { // 不记住
+					$.cookie("user", "", {expires:-1});
+					
+				}
+					//event.preventDefault();
+			})
+	
+		})
+	</script>
+</html>
+

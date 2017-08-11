@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>沱沱工社 - 注册</title>
+		<link rel="stylesheet" type="text/css" href="../css/enroll-style.css"/>
+	</head>
+
+	<body>
+		<!--头部 -->
+		<div class="header">
+			<a href="../index.html"><img src="../img/logo.png"/></a>
+			<p>欢迎加入沱沱工社</p>
+		</div>	
+		
+		<!--主体 -->
+		<div class="main">
+			<div class="main-box">
+				<div class="main-box-top">
+					<p>用户注册</p>
+					<span>已有账号？<a href="login.html">直接登录></a></span>
+				</div>
+				<div class="main-box-bottom">
+					<form action="../index.html" method="get" id="form">
+						<input type="text" id="phone" placeholder="请输入手机号"/><br>
+						<p class="tel_test _test">请输入正确格式的手机号码</p>
+						<p class="_right _right1">√</p>
+						<input type="password" id="password1" placeholder="请输入密码"/><br>
+						<p class="password1_test _test">请输入6至20位的密码</p>
+						<p class="_right _right2">√</p>
+						<input type="password" id="password2" placeholder="请再次输入密码"/><br>
+						<p class="password2_test _test">请输入正确密码</p>
+						<p class="_right _right3">√</p>
+						<input  class="check" wx-validator-rule="required" name="i_agree" type="checkbox">&nbsp;&nbsp;我已阅读并同意
+                        <a target="_blank" href="">《沱沱工社用户协议》 </a>
+                        <input class="input" type="submit" id="btn" value="立即登录"></input>                 
+						
+				</form>
+				<img src="../img/enroll-banner.jpg"/>
+				</div>
+				
+			</div>
+			
+		</div>
+<!--尾部-->
+		<div class="footer">
+			<ul>
+				<li><a href="">简体</a></li>
+				<li><a href="">繁体</a></li>
+				<li><a href="">English</a></li>
+				<li><a href="">常见问题</a></li>
+			</ul>
+			
+			<p>
+				Copyright &copy; 2009-2016 北京沱沱工社生态农业股份有限公司 版权所有 京ICP证100205号 京ICP备09043401号 京公网安备110105019943 食品流通许可证编号SP1101091310024845
+			</p>
+		</div>
+	</body>
+
+	<script type="text/javascript" src="../js/jquery/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+	<script>
+		$(function(){	
+			var reg_t=/^1[34578]\d{9}$/,
+				reg_p=/^[a-z0-9_-]{6,20}$/,
+				istrue=true;//判断输入的信息是否正确
+			//验证用户名是否合法
+			$("#phone").blur(function(){
+				var _phone=$(this).val();
+				//alert(_phone);
+				if (!reg_t.test(_phone)){
+					$(".tel_test").addClass("show");
+					$("._right1").removeClass("show");	
+					istrue=false;
+				}else{
+					$("._right1").addClass("show");	
+					$(".tel_test").removeClass("show");
+					istrue=true;
+				}
+			});
+			//验证第一遍密码是否合法
+			$("#password1").blur(function(){
+				var _password1=$(this).val();
+				if (!reg_p.test(_password1)){
+					$(".password1_test").addClass("show");
+					$("._right2").removeClass("show");	
+					istrue=false;
+				}else{
+					$("._right2").addClass("show");	
+					$(".password1_test").removeClass("show");
+					istrue=true;
+				}
+			});
+			
+			//验证第二遍密码是否合法
+			$("#password2").blur(function(){
+				var _password1=$(".password1_test").val(),
+					_password2=$(this).val();
+				console.log(_password1 === _password2);
+				if (_password1 != _password2){
+					$(".password2_test").addClass("show");
+					$("._right3").removeClass("show");	
+					istrue=false;
+					
+				}else{
+					$("._right3").addClass("show");	
+					$(".password2_test").removeClass("show");
+					istrue=true;
+				}
+			});
+	
+		})
+	</script>
+</html>

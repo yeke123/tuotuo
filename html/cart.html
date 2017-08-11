@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>沱沱工社 - 我的购物车</title>
+		<link rel="stylesheet" type="text/css" href="../font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/cart-style.css"/>
+	<body>
+		<div class="bigbox">
+			<div id="opacityBox"></div>
+			<div id="add">
+				<div id="add-header">请选择您的收货城市！</div>
+				<ul id="add_body_city">
+					<li>
+						<strong>热门：</strong>
+							<p>
+								<a>北京</a>
+								<a>上海</a>
+								<a>天津</a>
+							</p>
+					</li>
+					<li>
+						<strong>山东：</strong>
+							<p>
+								<a>济南</a>
+								<a>青岛</a>
+								<a>烟台</a>
+								<a>潍坊</a>
+								<a>临沂</a>
+								<a>淄博</a>
+								<a>济宁</a>
+								<a>泰安</a>
+								<a>聊城</a>
+								<a>威海</a>
+								<a>枣庄</a>
+								<a>德州</a>
+								<a>日照</a>
+								<a>东营</a>
+								<a>菏泽</a>
+								<a>滨州</a>
+								<a>莱芜</a>
+							</p>
+					</li>
+					<li>
+						<strong>江苏：</strong>
+						<p>
+							<a>南京</a>
+							<a>苏州</a>
+							<a>无锡</a>
+							<a>常州</a>
+							<a>徐州</a>
+							<a>南通</a>
+							<a>扬州</a>
+							<a>盐城</a>
+							<a>淮安</a>
+							<a>连云港</a>
+							<a>泰州</a>
+							<a>宿迁</a>
+							<a>镇江</a>
+						</p>
+					</li>
+					<li>
+						<strong>浙江：</strong>
+						<p>
+							<a>杭州</a>
+							<a>宁波</a>
+							<a>温州</a>
+							<a>金华</a>
+							<a>嘉兴</a>
+							<a>台州</a>
+							<a>绍兴</a>
+							<a>湖州</a>
+							<a>丽水</a>
+							<a>衢州</a>
+							<a>舟山</a>
+						</p>
+					</li>
+					<li>
+						<strong>河南：</strong>
+						<p>
+							<a>郑州</a>
+							<a>洛阳</a>
+							<a>新乡</a>
+							<a>南阳</a>
+							<a>许昌</a>
+							<a>平顶山</a>
+							<a>安阳</a>
+							<a>焦作</a>
+							<a>商丘</a>
+							<a>开封</a>
+							<a>濮阳</a>
+							<a>周口</a>
+							<a>信阳</a>
+							<a>驻马店</a>
+							<a>漯河</a>
+							<a>三门峡</a>
+							<a>鹤壁</a>
+							<a>济源</a>
+						</p>
+					</li>
+					<li>
+						<strong>辽宁：</strong>
+						<p>
+							<a>沈阳</a>
+							<a>大连</a>
+							<a>鞍山</a>
+							<a>锦州</a>
+							<a>抚顺</a>
+							<a>营口</a>
+							<a>盘锦</a>
+							<a>朝阳</a>
+							<a>丹东</a>
+							<a>辽阳</a>
+							<a>本溪</a>
+							<a>葫芦岛</a>
+							<a>铁岭</a>
+							<a>阜新</a>
+						</p>
+					</li>
+					<li>
+						<strong>河北：</strong>
+						<p>
+							<a>石家庄</a>
+							<a>保定</a>
+							<a>唐山</a>
+							<a>廊坊</a>
+							<a>邯郸</a>
+							<a>秦皇岛</a>
+							<a>沧州</a>
+							<a>邢台</a>
+							<a>衡水</a>
+							<a>张家口</a>
+							<a>承德</a>
+						</p>
+					</li>
+					<li><strong>山西：</strong>
+						<p>
+							<a>太原</a>
+							<a>临汾</a>
+							<a>大同</a>
+							<a>运城</a>
+							<a>晋中</a>
+							<a>长治</a>
+							<a>晋城</a>
+							<a>阳泉</a>
+							<a>吕梁</a>
+							<a>忻州</a>
+							<a>朔州</a>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<header>
+				<a href="../index.html" class="logo"><img src="../img/xlogo.png"></a>	
+				<p>我的购物车</p>
+				<div id="cart_step">
+					<img src="../img/cart_setp_1.png" />
+					<img src="../img/cart_setp_2.png" />
+					<img src="../img/cart_setp_3.png" />
+					<img src="../img/cart_setp_4.png" />
+				</div>
+			</header>
+			<p class="explain"><img src="../img/cart_zf_ts.jpg">说明：促销优惠和运费按同一订单计算，分开提交的订单则会重新计算促销优惠和运费！</p>
+			
+			<div id="cart-list">
+				<div id="delivery_add"><!--配送区域-->
+					<span>商品送至：</span>
+					<input type="text" id="add_peisong"/>
+					<span>选择配送区域，查看商品是否可送达</span>
+				</div>
+				<div class="title buy-box">
+					<div><input class="ck_all" type="checkbox"></div>
+ 					<div>商品名称</div>
+ 					<div>规格</div>
+ 					<div>库存状态</div>
+ 					<div>沱沱价</div>
+ 					<div>数量</div>
+ 					<div>金额</div>
+ 					<div>操作</div>
+ 				</div>
+ 				<div id="kong_gwc"><img src="../img/newshopp_img18.jpg" /></div>
+				<div id="list_foot">
+					<p id="total">合计：共计<em id="total_price">0.00</em>元</p>
+				</div>
+				<p id="dele_cart"><img src="../img/cart_delete.gif">清空购物车</p>
+				<p>若你没挑选完商品，请<a id="go_on" href="../index.html"><i class="iconfont icon-konggouwuche"></i>继续购物</a></p>
+				<a id="order" href="order.html">提交订单</a>
+			</div>
+			
+			
+		</div>	
+			<div class="footer">
+			<ul>
+				<li><a href="">简体</a></li>
+				<li><a href="">繁体</a></li>
+				<li><a href="">English</a></li>
+				<li><a href="">常见问题</a></li>
+			</ul>
+			
+			<p>
+				Copyright &copy; 2009-2016 北京沱沱工社生态农业股份有限公司 版权所有 京ICP证100205号 京ICP备09043401号 京公网安备110105019943 食品流通许可证编号SP1101091310024845
+			</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../artTemplate/template-native.js" ></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+	<script type="text/javascript" src="../js/cart.js" ></script>
+	<script type="text/html" id="cartProd_template">
+		<% for (var i = 0, len = products.length; i < len; i++) { 
+			var prod = products[i];
+		%>
+			<div class="body buy-box">
+ 				<div><input class="ck_product" type="checkbox" ></div>
+ 				<div class="img_name">
+ 					<img src="<%= prod.src %>">
+ 					<span><%= prod.name %></span>
+ 				</div>
+ 				<div class="standard"><%= prod.standard%></div>
+ 				<div class="ishave"><%= prod.ishave%></div>	 				
+ 				<div class="danjia"><span><%= prod.price %></span></div>
+ 				<div class="amount">
+ 					<input type="button" value="-" class="minus">	
+					<input type="text" value="<%= prod.num %>" class="text product_count" maxlength="2" min="0" max="99" size="1">
+					<input type="button" value="+" class="add">	
+ 				</div>
+ 				<div class="xiaoji"><%= prod.price * 10 * prod.num / 10%></div>
+ 				<div class="dele"><a href="javascript:void(0)">删除</a></div>
+			</div>
+		<% } %>	
+	</script>
+	
+	
+</html>
